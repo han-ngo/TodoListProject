@@ -1,85 +1,281 @@
 body {
-	width: 450px;
-	height: 450px;
-  font-family: "Roboto";
+	width: 510px;
+	height: 550px;
+	font-family: 'Raleway', sans-serif;
 	font-size: 0.9em;
-  background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content {
+  width: inherit;
+  margin-top: 35px;
+  margin-left: 0px;
+	overflow: auto;
+	z-index: -1;
 }
 
 #container {
-  width: 100%;
-	height: 100%;
-  background: #f7f7f7;
-	margin: 0;
+	width: inherit;
+	height: inherit;
+	top: 0;
+	left:0;
+	background: white /*#f7f7f7*/;
+	margin: 0 0 0 0;
+	margin-left: -8px;
 	padding: 0;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
-}
-
-h1 {
-  background: #bedbd8;
-  color: white;
-  margin: 0;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-.fa-plus {
-  float: right;
-}
-
-input{
-  font-size: 15px;
-  color: #bedbd8;
-  background-color: #f7f7f7;
-  width: 100%;
-  padding: 13px 13px 13px 20px;
-  box-sizing: border-box;
-  border: 3px solid rgba(0,0,0,0);
-}
-
-input:focus {
-  background: white;
-  border: 3px solid #bedbd8;
-  outline: none;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-span {
-  background: #bedbd8;
-  color: white;
-  height: 2.7em;
-  margin-right: 20px;
-  text-align: center;
-  width: 0;
-  display: inline-block;
-  transition: 0.2s linear;
-  opacity: 0;
-}
-
-li {
-  background: white;
-  height: 2.7em;
-  line-height: 2.7em;
-  color: #666;
-}
-
-li:hover span {
-  width: 2.7em;
-  opacity: 1.0;
-}
-
-li:nth-child(2n) {
-  background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
 }
 
 .completed {
-  color: gray;
-  text-decoration: line-through;
+	color: gray;
+	opacity: 0.5;
+	text-decoration: line-through;
+}
+
+.navBar{
+  background: #0689a3;
+  position: fixed;
+  top: 0;
+  left: 0;
+	color: white;
+	height: 35px;
+	margin: 0;
+  width: inherit;
+}
+
+.menu{
+  z-index:1;
+  font-weight:bold;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  font-size:0.8em;
+  width:20em;
+  height: inherit;
+  position:fixed;
+  top: 35px;
+  padding: 10px 20px;
+  font-size:12px;
+  background: white;
+}
+
+.KpopSelection{
+  z-index:1;
+  font-weight:bold;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  font-size:0.8em;
+  width: 100px;
+  margin-left: 24.5em;
+  height: 200px;
+  position:absolute;
+  padding: 10px 20px;
+  font-size: 12px;
+  background: white;
+  border-radius: 6px;
+  top: 35px;
+}
+
+.KpopSelection::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.fa-toggle-on {
+  margin: 10px 7px;
+	float: right;
+}
+
+.fa-toggle-off {
+	margin: 10px 7px;
+	float: right;
+}
+
+.fa-line-chart {
+  margin: 10px 7px;
+	float: right;
+}
+
+.fa-plus-circle {
+	margin: 10px 7px;
+	float: right;
+}
+
+.fa-cog {
+	margin: 10px 7px;
+	float: right;
+}
+
+.fa-bars {
+  margin: 10px 10px;
+}
+
+.fa-times {
+  margin: 10px 10px;
+}
+
+.fa-chevron-circle-down{
+	margin: 10px 7px;
+	float: right;
+	/*border-radius: 10px;*/
+	/*box-shadow: 1px 1px 5px rgba(0,0,0,0.5);*/
+}
+
+.fa-chevron-circle-up{
+	margin: 10px 7px;
+	float: right;
+	/*border-radius: 10px;*/
+	/*box-shadow: 1px 1px 5px rgba(0,0,0,0.5);*/
+}
+
+input {
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif;
+	color: #0689a3;
+	background-color: white;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+  top: 30px;
+}
+
+input:focus {
+	background: white;
+	border: 3px solid #0689a3;
+	outline: none;
+	font-weight: bold;
+	opacity: 1;
+}
+
+.content li span {
+	background: #0689a3;
+	color: white;
+	height: 2.7em;
+	margin-right: 20px;
+	text-align: center;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	width: inherit;
+	padding: 0;
+	font-weight: bold;
+}
+
+.content li {
+	background: white;
+	height: 2.7em;
+	line-height: 2.7em;
+	color: #595a5b;
+}
+
+.content li:hover span {
+	width: 2.7em;
+	opacity: 1.0;
+}
+
+.content li:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+.KpopSelection label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+  height: 25px;
+}
+
+.KpopSelection input {
+  width: 13px;
+  height: 25px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
+
+.KpopSelection span{
+	height: 25px;
+	line-height: 25px;
+  margin-left: 10px;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 0.75em;
+    width: 100px;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 10px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	margin: 0px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:   #0689a3;
+  opacity: 0.4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #0689a3;
+  opacity:  0.3;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #0689a3;
+  opacity:  0.3;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #0689a3;
+  opacity: 0.3;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #0689a3;
+  opacity: 0.3;
 }
